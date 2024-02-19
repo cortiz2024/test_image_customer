@@ -1,0 +1,52 @@
+### Organización de carpetas
+
+```
+└── 📁customer-experience
+    └── Readme.md
+    └── 📁base
+        └── 📁charts
+            └── 📁app-of-apps
+                └── 📁web-trackeo-pricing
+                    └── 📁app-tracking
+                        └── 📁tracking-micro-services
+                            └── Chart.yaml
+                            └── 📁templates
+                                └── ApiChatbot.yaml
+                                └── ApiTraducciones.yaml
+                                └── WebHistoriaDeEnviosOverlays.yaml
+                            └── values.yaml
+            └── 📁principal
+                └── 📁andreani
+                    └── Chart.yaml
+                    └── 📁templates
+                        └── app-of-apps.yaml
+                        └── app-of-projects.yaml
+                        └── main-project.yaml
+                        └── registry-access-secret.yaml
+                        └── repo-access-secret.yaml
+                    └── values.yaml
+            └── 📁projects
+                └── 📁customer-experience
+                    └── Chart.yaml
+                    └── 📁templates
+                        └── project-one.yaml
+                        └── project-three.yaml
+                        └── project-two.yaml
+                    └── values.yaml
+        └── kustomization.yaml
+    └── 📁overlays
+        └── 📁dev
+            └── 📁app-of-apps
+                └── 📁trancking-micro-services
+                    └── kustomization.yaml
+                    └── patch-values.yaml
+            └── 📁app-tracking
+                └── 📁trancking-micro-services
+                    └── kustomization.yaml
+                    └── patch-values.yaml
+            └── kustomization.yaml
+            └── 📁projects
+                └── 📁web-trackeo-pricing
+                    └── kustomization.yaml
+                    └── patch-values.yaml
+```

@@ -1,0 +1,12 @@
+appOne:
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  destination:
+    server: https://kubernetes.default.svc
+
+secret:
+  labels:
+    argocd.argoproj.io/secret-type: repository
+  stringData:
+    type: git
+    url: git@github.com:user/repo.git

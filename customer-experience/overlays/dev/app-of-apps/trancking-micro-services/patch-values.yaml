@@ -1,0 +1,11 @@
+namespace: argocd
+environment: dev
+
+projects:
+  projectOne:
+    name: project-dev
+    sourceRepos:
+      - '!ssh://git@GITHUB.com:infrastructure-services/test'
+    destinations:
+      - namespace: '*'
+        server: 'https://kubernetes.default.svc'
