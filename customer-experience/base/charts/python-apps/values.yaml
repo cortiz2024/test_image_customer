@@ -1,0 +1,6 @@
+appOne:
+  appName: first-app-name
+  projectName: project-name
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+

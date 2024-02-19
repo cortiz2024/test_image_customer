@@ -1,0 +1,79 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+  labels:
+    name: python-apps-dev
+  name: python-apps-dev
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: project-ApiChatbot-dev
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: '*'
+    server: https://kubernetes.default.svc
+  sourceRepos:
+  - '!ssh://git@GITHUB.com:infrastructure-services/test'
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: project-ApiTraducciones-dev
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: '*'
+    server: https://kubernetes.default.svc
+  sourceRepos:
+  - '!ssh://git@GITHUB.com:infrastructure-services/test'
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: project-WebHistoriaDeEnviosOverlays-dev
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: '*'
+    server: https://kubernetes.default.svc
+  sourceRepos:
+  - '!ssh://git@GITHUB.com:infrastructure-services/test'
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  labels:
+    name: first-python-app-dev
+  name: first-python-app-dev
+  namespace: argocd
+spec:
+  destination:
+    namespace: python-apps-dev
+    server: https://kubernetes.default.svc
+  project: project-one-dev
+  source:
+    chart: python-chart
+    helm:
+      releaseName: first-python-app-dev
+    repoURL: ghcr.io/cortiz2024/demo_app
+    targetRevision: 8.1.0-29-test
+  syncPolicy:
+    automated:
+      allowEmpty: true
+      prune: true
+      selfHeal: true

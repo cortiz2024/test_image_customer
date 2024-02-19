@@ -1,0 +1,36 @@
+environment: dev
+
+appOne:
+  appName: api-chat-bot
+  projectName: main-project
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    path: overlays/dev/app-tracking/tracking-micro-services
+    repoURL: git@github.com:cortiz2024/test_image.git
+    targetRevision: HEAD
+appTwo:
+  appName: api-traducciones
+  projectName: main-project
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    path: overlays/dev/app-tracking/tracking-micro-services
+    repoURL: git@github.com:cortiz2024/test_image.git
+    targetRevision: HEAD
+appThree:
+  appName: web-hist-envios
+  projectName: main-project
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    path: overlays/dev/app-tracking/tra
+    cking-micro-services
+    repoURL: git@github.com:cortiz2024/test_image.git
+    targetRevision: HEAD

@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-of-projects-dev
+  name: {{ .Values.applications.projects.name }}-app-of-projects-dev
   namespace: argocd
   finalizers: {{ .Values.applications.projects.finalizers | toYaml | nindent 4 }}
 spec:

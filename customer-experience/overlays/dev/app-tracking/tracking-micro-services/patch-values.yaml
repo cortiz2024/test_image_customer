@@ -1,0 +1,14 @@
+namespace: apps
+environment: dev
+
+appOne:
+  appName: first-python-app
+  projectName: project-one
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    chartName: python-chart
+    repoURL: ghcr.io/cortiz2024/demo_app
+    targetRevision: 8.1.0-29-test

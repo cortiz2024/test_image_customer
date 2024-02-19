@@ -5,6 +5,6 @@ helmGlobals:
   chartHome: ../../../base/charts
 
 resources:
-- app-of-apps/trancking-micro-services
-# - app-tracking/trancking-micro-services
-# - projects/web-trackeo-pricing
+# - app-of-apps/tracking-micro-services
+- app-tracking/tracking-micro-services
+- projects/web-trackeo-pricing

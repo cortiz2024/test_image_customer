@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# resources:
+# - second-python-app.yaml
+
+helmGlobals:
+  chartHome: ../../../../base/charts
+
+helmCharts:
+- name: python-apps
+  releaseName: apps-dev
+  valuesFile: ./patch-values.yaml

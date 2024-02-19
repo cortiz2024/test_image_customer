@@ -3,9 +3,13 @@ environment: dev
 
 projects:
   projectOne:
-    name: project-dev
+    name: project-ApiChatbot
     sourceRepos:
       - '!ssh://git@GITHUB.com:infrastructure-services/test'
     destinations:
       - namespace: '*'
         server: 'https://kubernetes.default.svc'
+  projectTwo:
+    name: project-ApiTraducciones
+  projectThree:
+    name: project-WebHistoriaDeEnviosOverlays

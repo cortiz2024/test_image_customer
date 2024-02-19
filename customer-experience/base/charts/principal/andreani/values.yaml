@@ -21,29 +21,17 @@ spec:
 
 applications:
   projects:
-    finalizers:
-      - resources-finalizer.argocd.argoproj.io
-    path: overlays/test/projects
-    repoURL: git@github.com:cortiz2024/test_image.git
-    targetRevision: HEAD
-  apps:
+    name: "web-trackeo-pricing"
     finalizers:
       - resources-finalizer.argocd.argoproj.io
     path: overlays/test/apps-of-apps
     repoURL: git@github.com:cortiz2024/test_image.git
     targetRevision: HEAD
-
-applicationsprod:
-  projects:
-    finalizers:
-      - resources-finalizer.argocd.argoproj.io
-    path: overlays/production/projects
-    repoURL: git@github.com:cortiz2024/test_image.git
-    targetRevision: HEAD
   apps:
+    name: "customer-experience"
     finalizers:
       - resources-finalizer.argocd.argoproj.io
-    path: overlays/production/apps-of-apps
+    path: overlays/test/apps-of-apps
     repoURL: git@github.com:cortiz2024/test_image.git
     targetRevision: HEAD
 
