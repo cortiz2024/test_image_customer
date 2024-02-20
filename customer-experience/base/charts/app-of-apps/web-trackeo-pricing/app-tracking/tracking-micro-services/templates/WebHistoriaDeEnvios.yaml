@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ .Values.appOne.appName }}-{{ .Values.environment }}
+  name: {{ .Values.appThree.appName }}-{{ .Values.environment }}
   namespace: argocd
-  finalizers: {{ .Values.appOne.finalizers | toYaml | nindent 4 }}
+  finalizers: {{ .Values.appThree.finalizers | toYaml | nindent 4 }}
 spec:
   destination: 
-    server: {{ .Values.appThree.destination.server }}
-  project: {{ .Values.appThree.projectName }}
+    server: {{ .Values.appOne.destination.server }}
+  project: {{ .Values.appOne.projectName }}
   source:
     path: {{ .Values.appOne.source.path }}
     repoURL: {{ .Values.appOne.source.repoURL }}
