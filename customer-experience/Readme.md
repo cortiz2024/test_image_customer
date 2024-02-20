@@ -19,6 +19,8 @@
                 └── 📁andreani
                     └── Chart.yaml
                     └── 📁templates
+                        └── app-of-apps-three.yaml
+                        └── app-of-apps-two.yaml
                         └── app-of-apps.yaml
                         └── app-of-projects.yaml
                         └── main-project.yaml
@@ -45,8 +47,15 @@
         └── 📁dev
             └── 📁app-of-apps
                 └── 📁tracking-micro-services
-                    └── kustomization.yaml
-                    └── patch-values.yaml
+                    └── 📁api-chat-bot
+                        └── kustomization.yaml
+                        └── patch-values.yaml
+                    └── 📁api-traducciones
+                        └── kustomization.yaml
+                        └── patch-values.yaml
+                    └── 📁web-hist-envios
+                        └── kustomization.yaml
+                        └── patch-values.yaml
             └── 📁app-tracking
                 └── 📁tracking-micro-services
                     └── 📁api-chat-bot
