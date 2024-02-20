@@ -8,10 +8,14 @@ appOne:
   destination:
     server: https://kubernetes.default.svc
   source:
-    path: customer-experience/overlays/dev/app-tracking/tracking-micro-services
+    path: customer-experience/overlays/dev/app-tracking/tracking-micro-services/api-chat-bot
     repoURL: git@github.com:cortiz2024/test_image_customer.git
     targetRevision: HEAD
 appTwo:
   appName: api-traducciones
+  source:
+    path: customer-experience/overlays/dev/app-tracking/tracking-micro-services/api-traducciones
 appThree:
   appName: web-hist-envios
+  source:
+    path: customer-experience/overlays/dev/app-tracking/tracking-micro-services/web-hist-envios

@@ -9,7 +9,7 @@ spec:
     server: {{ .Values.appOne.destination.server }}
   project: {{ .Values.appOne.projectName }}
   source:
-    path: {{ .Values.appOne.source.path }}
+    path: {{ .Values.appThree.source.path }}
     repoURL: {{ .Values.appOne.source.repoURL }}
     targetRevision: {{ .Values.appOne.source.targetRevision }}
   syncPolicy:

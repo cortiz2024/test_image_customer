@@ -5,9 +5,9 @@ kind: Kustomization
 # - second-python-app.yaml
 
 helmGlobals:
-  chartHome: ../../../../base/charts
+  chartHome: ../../../../../base/charts
 
 helmCharts:
 - name: python-apps
-  releaseName: apps-dev
+  releaseName: app
   valuesFile: ./patch-values.yaml
