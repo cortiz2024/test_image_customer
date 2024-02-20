@@ -12,3 +12,25 @@ appOne:
     chartName: python-chart
     repoURL: ghcr.io/cortiz2024/demo_app
     targetRevision: 8.1.0-29-test
+appTwo:
+  appName: sec-python-app
+  projectName: project-one
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    chartName: python-chart
+    repoURL: ghcr.io/cortiz2024/demo_app
+    targetRevision: 8.1.0-29-test
+appThree:
+  appName: three-python-app
+  projectName: project-one
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    chartName: python-chart
+    repoURL: ghcr.io/cortiz2024/demo_app
+    targetRevision: 8.1.0-29-test

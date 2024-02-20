@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: {{ .Values.appTwo.appName }}-{{ .Values.environment }}
   namespace: argocd
-  finalizers: {{ .Values.appTwo.finalizers | toYaml | nindent 4 }}
+  finalizers: {{ .Values.appOne.finalizers | toYaml | nindent 4 }}
 spec:
   destination: 
     server: {{ .Values.appOne.destination.server }}

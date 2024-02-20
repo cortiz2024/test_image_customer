@@ -13,9 +13,5 @@ appOne:
     targetRevision: HEAD
 appTwo:
   appName: api-traducciones
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
 appThree:
   appName: web-hist-envios
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
