@@ -5,6 +5,7 @@ metadata:
   namespace: argocd
   finalizers: {{ .Values.appThree.finalizers | toYaml | nindent 4 }}
   labels:
+    argocd.argoproj.io/instance: {{ .Values.appThree.instance }}
     name: {{ .Values.appThree.appName }}-{{ .Values.environment }}
 spec:
   destination:
