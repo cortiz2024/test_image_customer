@@ -1,9 +1,9 @@
 namespace: apps-sec
-environment: test
+environment: dev
 
 appOne:
   appName: api-traducciones-app
-  projectName: project-one
+  projectName: project-api-traducciones
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   destination:
