@@ -1,5 +1,5 @@
 namespace: apps
-environment: dev
+environment: test
 
 appOne:
   appName: first-python-app
