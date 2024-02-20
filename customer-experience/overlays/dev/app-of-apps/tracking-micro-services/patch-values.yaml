@@ -2,7 +2,7 @@ environment: dev
 
 appOne:
   appName: api-chat-bot
-  projectName: main-project
+  projectName: api-chatbot
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   destination:
@@ -13,9 +13,11 @@ appOne:
     targetRevision: HEAD
 appTwo:
   appName: api-traducciones
+  projectName: api-traducciones
   source:
     path: customer-experience/overlays/dev/app-tracking/tracking-micro-services/api-traducciones
 appThree:
   appName: web-hist-envios
+  projectName: web-historia-de-envios
   source:
     path: customer-experience/overlays/dev/app-tracking/tracking-micro-services/web-hist-envios
