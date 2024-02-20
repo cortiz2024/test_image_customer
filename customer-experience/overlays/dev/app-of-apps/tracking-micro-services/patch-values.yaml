@@ -8,8 +8,8 @@ appOne:
   destination:
     server: https://kubernetes.default.svc
   source:
-    path: overlays/dev/app-tracking/tracking-micro-services
-    repoURL: git@github.com:cortiz2024/test_image.git
+    path: customer-experience/overlays/dev/app-tracking/tracking-micro-services
+    repoURL: git@github.com:cortiz2024/test_image_customer.git
     targetRevision: HEAD
 appTwo:
   appName: api-traducciones
@@ -19,8 +19,8 @@ appTwo:
   destination:
     server: https://kubernetes.default.svc
   source:
-    path: overlays/dev/app-tracking/tracking-micro-services
-    repoURL: git@github.com:cortiz2024/test_image.git
+    path: customer-experience/overlays/dev/app-tracking/tracking-micro-services
+    repoURL: git@github.com:cortiz2024/test_image_customer.git
     targetRevision: HEAD
 appThree:
   appName: web-hist-envios
@@ -30,7 +30,6 @@ appThree:
   destination:
     server: https://kubernetes.default.svc
   source:
-    path: overlays/dev/app-tracking/tra
-    cking-micro-services
-    repoURL: git@github.com:cortiz2024/test_image.git
+    path: customer-experience/overlays/dev/app-tracking/tracking-micro-services
+    repoURL: git@github.com:cortiz2024/test_image_customer.git
     targetRevision: HEAD

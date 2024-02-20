@@ -31,8 +31,8 @@ applications:
     name: "customer-experience"
     finalizers:
       - resources-finalizer.argocd.argoproj.io
-    path: overlays/test/apps-of-apps
-    repoURL: git@github.com:cortiz2024/test_image.git
+    path: customer-experience/overlays/dev/apps-of-apps/tracking-micro-services
+    repoURL: git@github.com:cortiz2024/test_image_customer.git
     targetRevision: HEAD
 
 repoSecret:
