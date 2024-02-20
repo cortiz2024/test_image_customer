@@ -13,7 +13,7 @@
                             └── 📁templates
                                 └── ApiChatbot.yaml
                                 └── ApiTraducciones.yaml
-                                └── WebHistoriaDeEnviosOverlays.yaml
+                                └── WebHistoriaDeEnvios.yaml
                             └── values.yaml
             └── 📁principal
                 └── 📁andreani
@@ -33,17 +33,31 @@
                         └── project-three.yaml
                         └── project-two.yaml
                     └── values.yaml
+            └── 📁python-apps
+                └── Chart.yaml
+                └── 📁templates
+                    └── first-python-app.yaml
+                    └── namespace.yaml
+                └── values.yaml
         └── kustomization.yaml
+    └── output.yaml
     └── 📁overlays
         └── 📁dev
             └── 📁app-of-apps
-                └── 📁trancking-micro-services
+                └── 📁tracking-micro-services
                     └── kustomization.yaml
                     └── patch-values.yaml
             └── 📁app-tracking
-                └── 📁trancking-micro-services
-                    └── kustomization.yaml
-                    └── patch-values.yaml
+                └── 📁tracking-micro-services
+                    └── 📁api-chat-bot
+                        └── kustomization.yaml
+                        └── patch-values.yaml
+                    └── 📁api-traducciones
+                        └── kustomization.yaml
+                        └── patch-values.yaml
+                    └── 📁web-hist-envios
+                        └── kustomization.yaml
+                        └── patch-values.yaml
             └── kustomization.yaml
             └── 📁projects
                 └── 📁web-trackeo-pricing
