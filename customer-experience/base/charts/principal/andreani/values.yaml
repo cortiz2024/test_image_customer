@@ -28,12 +28,18 @@ applications:
     repoURL: git@github.com:cortiz2024/test_image_customer.git
     targetRevision: HEAD
   apps:
-    name: "customer-experience"
+    name: "api-chatbot"
     finalizers:
       - resources-finalizer.argocd.argoproj.io
-    path: customer-experience/overlays/dev/app-of-apps/tracking-micro-services
+    path: customer-experience/overlays/dev/app-of-apps/tracking-micro-services/api-chat-bot
     repoURL: git@github.com:cortiz2024/test_image_customer.git
     targetRevision: HEAD
+  appsTwo:
+    name: "api-traducciones"
+    path: customer-experience/overlays/dev/app-of-apps/tracking-micro-services/api-traducciones
+  appsThree:
+    name: "web-historia-de-envios"
+    path: customer-experience/overlays/dev/app-of-apps/tracking-micro-services/web-hist-envios
 
 repoSecret:
   name: main-private-repo-secret
