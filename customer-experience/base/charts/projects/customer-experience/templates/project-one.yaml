@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: {{ .Values.projects.projectOne.name }}-{{ .Values.environment }}
+  name: project-{{ .Values.projects.projectOne.name }}-{{ .Values.environment }}
   namespace: argocd
 spec:
   sourceRepos: {{ .Values.projects.projectOne.sourceRepos | toYaml | nindent 4 }}
