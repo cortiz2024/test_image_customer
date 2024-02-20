@@ -3,7 +3,7 @@ environment: test
 
 appOne:
   appName: api-traducciones-app
-  projectName: project-two
+  projectName: project-one
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   destination:
